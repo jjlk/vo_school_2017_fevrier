@@ -58,7 +58,6 @@ table_3fgl = stilts.tread(filename)
 
 # Selection of first ten BL Lacs (labelled as bll)
 table = (table_3fgl.cmd_select('equals(CLASS1,"bll")')
-         .cmd_keepcols('Source_Name')
          .cmd_head(10))
 
 # Loop on sources
@@ -104,11 +103,11 @@ Indices :
  - utilisation de la méthode `stilts.plot2d`
   
 ### Caractéristiques spectrales - Hardness ratios
- 
+
 ### Redshift
 Représenter la distribution des redshifts des BL Lacs et des FSRQs sur un même graphe. Le catalogue 3LAC 
 contient les redshifts des blazars lorsque celui-ci a été déterminé.
 Indices : 
- - croiser les catalogues avec `stilts.tmatch2`
+ - croiser les catalogues 3FGL et 3LAC avec `stilts.tmatch2`
  - exclure les sources qui n'ont pas de mesure de redshift
  - utilisation de la méthode `stilts.plothist`
