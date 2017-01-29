@@ -96,17 +96,36 @@ Spectrum Radio Quasar (FSRQ) détectés par le LAT. Les catalogues sont disponib
 `catalogues`.
  
 ### Caractéristiques spectrales
-Représenter sur un même graphe l'indice spectral et l'énergie pivot des BL Lacs et des FSRQs.
+Représenter sur un même graphe l'indice spectral et l'énergie pivot (qui est l'énergie à laquelle 
+l'erreur sur le flux différentiel est la plus faible) des BL Lacs et des FSRQs.
 
 Indices : 
  - sélectionner les différentes classes (CLASS1) de sources (bll, BLL, fsrq, FSRQs) avec la commande `cmd_select`
  - utilisation de la méthode `stilts.plot2d`
   
 ### Caractéristiques spectrales - Hardness ratios
+Le catalogue 3FGL fournit cinq valeurs de flux mesurées dans cinq bandes en énergie, 100-300 GeV, 300-1000 GeV, 
+1000-3000 GeV, 3000-10000 GeV et 10000-100000 GeV.
+En astrophysique, on utilise généralement des quantités appelées les « hardness ratios » (HR) qui permettent
+d'estimer un indice spectral local avec des valeurs de flux mesurées dans deux bandes en énergie consécutives :
+
+HR_ij = (EnergyFlux_j - EnergyFlux_i) / (EnergyFlux_i + EnergyFlux_j)
+
+Ici on utilisera les valeurs du logarithme du flux en énergie (valeur du flux multiplié par l'énergie moyenne de l'intervalle
+considéré) afin de mieux contraindre les HR.
+
+Représenter sur un même graphe les « hardness ratios » HR_23 et HR_34.
+
+Indices : 
+ - Quelle valeur utiliser pour l'énergie moyenne de l'intervalle en énergie pour déterminer le 
+ flux en énergie de la source dans une bande en énergie (la source suit une certaine loi spectrale) ?
+ - calculer les hardness ratios avec plusieus étapes, énergie moyenne de l'intervalle, flux en énergie dans la bande et HR
+ - utilisation de la commande `cmd_addcol` pour ajouter une colonne dans une table
 
 ### Redshift
 Représenter la distribution des redshifts des BL Lacs et des FSRQs sur un même graphe. Le catalogue 3LAC 
 contient les redshifts des blazars lorsque celui-ci a été déterminé.
+
 Indices : 
  - croiser les catalogues 3FGL et 3LAC avec `stilts.tmatch2`
  - exclure les sources qui n'ont pas de mesure de redshift
