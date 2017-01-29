@@ -1,6 +1,6 @@
 # Tutoriel de haute énergie - STILTS
 
-Pour télécharger les scripts et les catalogues exécuter dans le répertoire de travail : 
+Pour télécharger les scripts et les catalogues, exécuter dans le répertoire de travail : 
 
 ```git clone  https://github.com/jjlk/vo_school_2017_fevrier```
 
