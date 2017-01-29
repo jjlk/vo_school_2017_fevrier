@@ -97,10 +97,10 @@ On peut aussi consulter la documentation pour obtenir des informations sur :
 Dans cette partie nous allons utiliser les catalogues 3FGL (LAT 4-year Point Source Catalog) 
 et 3LAC (The Third LAT AGN Catalog) fournis par la collaboration fermi/LAT.
 Le catalogue 3FGL contient l'ensemble des sources détectées en 4 ans au-delà de 100 MeV par le télescope LAT 
-embarqué à bord du satellite Fermi. Le catalogue 3LAC est exclusivement dédié aux noyaux actifs de galaxie (AGN)
-et notamment aux blazars (>95% des AGN).
+embarqué à bord du satellite Fermi. Le catalogue 3LAC (même temps d'intégration des photons que pour le 2FGL) 
+est exclusivement dédié aux noyaux actifs de galaxie (AGN) et notamment aux blazars (>95% des AGN).
  
-L'objectif est de charactériser les différences spectrales entre les blazars de type BL Lacs et Flat
+L'objectif est de charactériser les différences spectrales entre les blazars de type BL Lac et Flat
 Spectrum Radio Quasar (FSRQ) détectés par le LAT. Les catalogues sont disponibles dans le répertoire
 `catalogues`.
  
