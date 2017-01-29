@@ -1,15 +1,8 @@
 # coding: utf8
 
-# Partie I: différences paramètres spectraux et de variabilité des
-# deux diféfrents type de blazars dans le 3FGL
-# catalogue utilisé : 3FGL
-# Catalogue sur le site de Fermi :
-# https://fermi.gsfc.nasa.gov/ssc/data/access/lat/4yr_catalog/gll_psc_v16.fit
-# enregistrer le 3FGL dans le repertoire de travail
-
 # Ouverture du catalogue
 import stilts
-filename = './gll_psc_v16.fit'
+filename = '../catalogues/gll_psc_v16.fit'
 table_3fgl = stilts.tread(filename)
 
 # selectionne les BL Lacs et les FSRQs
@@ -70,7 +63,7 @@ table_blazar = stilts.tcat(in_=[table_bll, table_fsrq])
 
 # Obtenir le catalogue 3LAC, haute latitude, (Vizier, Topcat TAP, ou autres)
 # J/ApJ/810/14/highlat
-filename = '3LAC.fits'
+filename = '../catalogues/3LAC.fits'
 table_3lac = stilts.tread(filename)
 
 # Cross match avec le 3LAC (haute latitude (|b|>10 degree))
@@ -111,7 +104,7 @@ stilts.plothist(in_bll=table_3lac_bll,
 
 
 # Bonus
-# Example de plot en 2D
+# Exemple de plot en 2D
 stilts.plot2d(in_3fgl=table_3fgl, xdata_3fgl='GLON', ydata_3fgl='GLAT',
               xerror_3fgl='Conf_95_SemiMinor',
               yerror_3fgl='Conf_95_SemiMajor',
@@ -123,18 +116,3 @@ stilts.plot2d(in_3fgl=table_3fgl, xdata_3fgl='GLON', ydata_3fgl='GLAT',
               xlabel="l (Deg)",
               ylabel="b (Deg)",
               name_3fgl='3FGL', name_bll='BL Lacs', name_fsrq='FSRQs', legend='true')
-
-# find=findopt,
-# scorecol=scorecolopt,
-# fixcols=fixcolsopt,
-# suffix0=sufx0,
-# suffix1=sufx1,
-# usefoot=usefootopt,
-# footnside=footnsideopt, #default
-# copycols=copycolsopt,
-# parallel=parallelopt,
-# erract=erractopt,
-# ostream=ostreamopt,
-# verb=verbopt,
-# emptyok=emptyokopt
-        
