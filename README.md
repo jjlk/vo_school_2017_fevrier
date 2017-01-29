@@ -1,5 +1,9 @@
 # Tutoriel de haute énergie - STILTS
 
+Pour télécharger les scripts et les catalogues exécuter dans le répertoire de travail : 
+
+```git clone  https://github.com/jjlk/vo_school_2017_fevrier```
+
 ## Objectifs
 Se familiariser avec la manipulation des catalogues avec la librairie
 [STILTS](http://www.star.bris.ac.uk/~mbt/stilts/). Celle-ci permet 
@@ -72,7 +76,12 @@ for ievt in range(nevts):
     dec = row['DEJ2000']
     print('Source name: {}, RA={}, DEC={}'.format(name, ra, dec))
 ```
-
+Ces deux exemples peuvent être exécutés directement dans l'interpréteur en exécutant chacune des lignes
+ou en utilisant un script qui peut être appelé avec :
+```
+java -jar jystilts.jar 
+>>> execfile('script.py')
+```
 Pour obtenir des informations sur une commande de STILTS :
 ```
 >>> import stilts
@@ -84,7 +93,7 @@ On peut aussi consulter la documentation pour obtenir des informations sur :
  - [les différents moyens pour croiser des catalogues](http://www.star.bris.ac.uk/~mbt/stilts/sun256/match.html)
  - [les fonctions d'affichage de données (histogramme, 2D, 3D, dans le ciel, etc.)](http://www.star.bris.ac.uk/~mbt/stilts/sun256/plot2.html)
  
-## Blazars: Différences entre les BL Lacs et les FSRQs
+## S'exercer avec les blazars: différences spectrales entre les BL Lacs et les FSRQs
 Dans cette partie nous allons utiliser les catalogues 3FGL (LAT 4-year Point Source Catalog) 
 et 3LAC (The Third LAT AGN Catalog) fournis par la collaboration fermi/LAT.
 Le catalogue 3FGL contient l'ensemble des sources détectées en 4 ans au-delà de 100 MeV par le télescope LAT 
@@ -95,7 +104,7 @@ L'objectif est de charactériser les différences spectrales entre les blazars d
 Spectrum Radio Quasar (FSRQ) détectés par le LAT. Les catalogues sont disponibles dans le répertoire
 `catalogues`.
  
-### Caractéristiques spectrales
+### 1) Caractéristiques spectrales
 Représenter sur un même graphe l'indice spectral et l'énergie pivot (qui est l'énergie à laquelle 
 l'erreur sur le flux différentiel est la plus faible) des BL Lacs et des FSRQs.
 
@@ -103,7 +112,7 @@ Indices :
  - sélectionner les différentes classes (CLASS1) de sources (bll, BLL, fsrq, FSRQs) avec la commande `cmd_select`
  - utilisation de la méthode `stilts.plot2d`
   
-### Caractéristiques spectrales - Hardness ratios
+### 2) Caractéristiques spectrales - Hardness ratios
 Le catalogue 3FGL fournit cinq valeurs de flux mesurées dans cinq bandes en énergie, 100-300 GeV, 300-1000 GeV, 
 1000-3000 GeV, 3000-10000 GeV et 10000-100000 GeV.
 En astrophysique, on utilise généralement des quantités appelées les « hardness ratios » (HR) qui permettent
@@ -122,7 +131,7 @@ Indices :
  - calculer les hardness ratios avec plusieus étapes, énergie moyenne de l'intervalle, flux en énergie dans la bande et HR
  - utilisation de la commande `cmd_addcol` pour ajouter une colonne dans une table
 
-### Redshift
+### 3) Redshift
 Représenter la distribution des redshifts des BL Lacs et des FSRQs sur un même graphe. Le catalogue 3LAC 
 contient les redshifts des blazars lorsque celui-ci a été déterminé.
 
