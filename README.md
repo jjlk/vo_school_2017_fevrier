@@ -16,7 +16,8 @@ de manipulations doivent être réalisées sur des catalogues.
 ## Installation de la librairie JyStilts
 Les instructions sont indiquées [ici](http://www.star.bris.ac.uk/~mbt/stilts/#install).
 Nous utiliserons le paquet qui contient STILTS et l'interpréteur Jython
-([fichier](http://www.star.bris.ac.uk/~mbt/stilts/jystilts.jar)). 
+([fichier](http://www.star.bris.ac.uk/~mbt/stilts/jystilts.jar)), qui correspond 
+à la version de Python 2.5. 
 Cette manière d'utiliser la librairie STILTS permet d'utiliser les fonctionalités
 d'un language de programmation tel que Python (ici Jython, développé en java en lieu 
 et place du C) comme les boucles, variables, fonctions, classes, etc.
