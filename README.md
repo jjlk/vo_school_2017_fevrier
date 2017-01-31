@@ -75,7 +75,7 @@ for ievt in range(nevts):
     name = row['Source_Name']
     ra = row['RAJ2000']
     dec = row['DEJ2000']
-    print 'Source name: %s, RA=%f, DEC=%f' % (name, ra, dec)
+    print('Source name: %s, RA=%f, DEC=%f' % (name, ra, dec))
 ```
 Ces deux exemples peuvent être exécutés directement dans l'interpréteur en exécutant chacune des lignes
 ou en utilisant un script qui peut être appelé avec :
