@@ -1,3 +1,4 @@
+![alt tag](./logo_asterics.png)
 # Tutoriel de haute énergie - STILTS
 
 Pour télécharger les scripts et les catalogues, exécuter dans le répertoire de travail : 
